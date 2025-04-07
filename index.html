@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Adivinanzas Bíblicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Juego de Adivinanzas Bíblicas</h1>
+        <div id="game-area">
+            <p>Nivel: <span id="level">1</span> | Libro: <span id="book">Génesis</span></p>
+            <p>Progreso: <span id="progress">0/10</span> | Modo: <span id="mode">Adivinanzas</span></p>
+            <div id="riddle-display"></div>
+            <input type="text" id="user-answer" placeholder="Escribe tu respuesta">
+            <button onclick="checkAnswer()">Verificar</button>
+            <p id="result"></p>
+            <p>Puntuación Total (Adivinanzas): <span id="score">0</span></p>
+            <button onclick="nextRiddle()" id="next-button">Siguiente Adivinanza</button>
+        </div>
+        <div id="exam-area" class="hidden">
+            <h2>Examen</h2>
+            <ol id="exam-questions"></ol>
+            <button onclick="submitExam()">Enviar Examen</button>
+            <p id="exam-result"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
